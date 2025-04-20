@@ -2,15 +2,15 @@ const express = require('express')
 const app = express()
 
 app.get('/', function(req, res){
-    res.send('Olá, sou progamador BackEnd Jr!!!')
+    res.sendFile(__dirname +'/html/index.html')
 })
 
 app.get('/sobre', function(req, res){
-    res.send('Aqui encontrasse algumas coriosidades sobre nós.')
+    res.sendFile(__dirname +'/html/sobre.html')
 })
 
 app.get('/blog', function(req, res){
-    res.send('Bem vindo ao nosso blog de ajuda.')
+    res.sendFile(__dirname +'/html/blog.html')
 })
 
 app.get('/Ola/:cargo/:nome', function(req, res){
